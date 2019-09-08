@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Monblan project</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+        <link rel="stylesheet" href="style/style.css">
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker6').datetimepicker();
+                $('#glyphicon-remove6').click(function () {
+                    $('#datetimepicker6').data("DateTimePicker").clear();
+                });
+                $('#datetimepicker7').datetimepicker({
+                    useCurrent: false //Important! See issue #1075
+                });
+                $('#glyphicon-remove7').click(function () {
+                    $('#datetimepicker7').data("DateTimePicker").clear();
+                });
+                $("#datetimepicker6").on("dp.change", function (e) {
+                    $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+                });
+                $("#datetimepicker7").on("dp.change", function (e) {
+                    $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="parent-container">
+            <div class="container">
+                <div class="row">
+                    <header class="col-xs-12">
+                        <div class="row">
+                            <div class="logo col-xs-12 col-sm-6 col-lg-4">
+                                <img src="image/logo.png" alt="monoblan">
+                            </div>
+                            <div class="description col-xs-12 col-sm-6 col-lg-8">
+                                <div class="monblanproject">
+                                    monblanproject
+                                </div>
+                                <div class="start">
+                                    Start on 17-02-2016
+                                </div>
+                                <div class="numbers">
+                                    <div><span>870</span> posts</div>
+                                    <div><span>11,787</span> followers</div>
+                                    <div><span>112</span> following</div>
+                                </div>
+                                <div class="container">
+                                    <label for="date">Date</label>
+                                    <div class='col-md-3'>
+                                        <div class="form-group">
+                                            <div class='input-group date' id='datetimepicker6'>
+                                                <input type='text' class="form-control" name="date"/>
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-remove" id='glyphicon-remove6'></span>
+                                                </span>
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-3'>
+                                        <div class="form-group">
+                                            <div class='input-group date' id='datetimepicker7'>
+                                                <input type='text' class="form-control" />
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-remove" id='glyphicon-remove7'></span>
+                                                </span>
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </div>
+        <div class="container container_posts">
+            <div class="row">
+                <div class="posts">
+                        <div class="block col-xs-12 col-sm-6 col-lg-4">
+                            <img src="image/block1.png" alt="picture">
+                            <div class="overlay">
+                                <div class="first">
+                                    <span>Today</span>
+                                    <span class="likes">
+                                        <img src="image/likes.png">
+                                    </span>
+                                    <span>128</span>
+                                    <span class="comment">
+                                        <img src="image/comment.png">
+                                    </span>
+                                    <span> 31</span>
+                                </div>
+                                <div>
+                                    <span>9-08-2016</span>
+                                    <span class="likes">
+                                        <img src="image/likes.png">
+                                    </span>
+                                    <span>67</span>
+                                    <span class="comment">
+                                        <img src="image/comment.png">
+                                    </span>
+                                    <span>22</span>
+                                </div>
+                                <div>
+                                    <span>Image upload: 11-04-2016</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block col-xs-12 col-sm-6 col-lg-4">
+                            <img src="image/block2.png" alt="picture">
+                            <div class="overlay">
+                                    <div class="first">
+                                            <span>Today</span>
+                                            <span class="likes">
+                                                <img src="image/likes.png">
+                                            </span>
+                                            <span>12,800</span>
+                                            <span class="comment">
+                                                <img src="image/comment.png">
+                                            </span>
+                                            <span> 3,100</span>
+                                    </div>
+                                    <div>
+                                        <span>9-08-2016</span>
+                                        <span class="likes">
+                                            <img src="image/likes.png">
+                                        </span>
+                                        <span>67</span>
+                                        <span class="comment">
+                                            <img src="image/comment.png">
+                                        </span>
+                                        <span>22</span>
+                                    </div>
+                                    <div>
+                                        <span>Image upload: 11-04-2016</span>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="block col-xs-12 col-sm-6 col-lg-4">
+                            <img src="image/block3.png" alt="picture">
+                            <div class="overlay">
+                                <div class="first">
+                                    <span>Today</span>
+                                    <span class="likes">
+                                        <img src="image/likes.png">
+                                    </span>
+                                    <span>128</span>
+                                    <span class="comment">
+                                        <img src="image/comment.png">
+                                    </span>
+                                    <span> 31</span>
+                                </div>
+                                <div>
+                                    <span>9-08-2016</span>
+                                    <span class="likes">
+                                        <img src="image/likes.png">
+                                    </span>
+                                    <span>67</span>
+                                    <span class="comment">
+                                        <img src="image/comment.png">
+                                    </span>
+                                    <span>22</span>
+                                </div>
+                                <div>
+                                    <span>Image upload: 11-04-2016</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block col-xs-12 col-sm-6 col-lg-4">
+                            <img src="image/block4.png" alt="picture">
+                            <div class="overlay">
+                                <div class="first">
+                                    <span>Today</span>
+                                    <span class="likes">
+                                        <img src="image/likes.png">
+                                    </span>
+                                    <span>128</span>
+                                    <span class="comment">
+                                        <img src="image/comment.png">
+                                    </span>
+                                    <span> 31</span>
+                                </div>
+                                <div>
+                                    <span>9-08-2016</span>
+                                    <span class="likes">
+                                        <img src="image/likes.png">
+                                    </span>
+                                    <span>67</span>
+                                    <span class="comment">
+                                        <img src="image/comment.png">
+                                    </span>
+                                    <span>22</span>
+                                </div>
+                                <div>
+                                    <span>Image upload: 11-04-2016</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block col-xs-12 col-sm-6 col-lg-4">
+                            <img src="image/block5.png" alt="picture">
+                            <div class="overlay">
+                                <div class="first">
+                                    <span>Today</span>
+                                    <span class="likes">
+                                        <img src="image/likes.png">
+                                    </span>
+                                    <span>128</span>
+                                    <span class="comment">
+                                        <img src="image/comment.png">
+                                    </span>
+                                    <span> 31</span>
+                                </div>
+                                <div>
+                                    <span>9-08-2016</span>
+                                    <span class="likes">
+                                        <img src="image/likes.png">
+                                    </span>
+                                    <span>67</span>
+                                    <span class="comment">
+                                        <img src="image/comment.png">
+                                    </span>
+                                    <span>22</span>
+                                </div>
+                                <div>
+                                    <span>Image upload: 11-04-2016</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block col-xs-12 col-sm-6 col-lg-4">
+                            <img src="image/block6.png" alt="picture">
+                            <div class="overlay">
+                                <div class="first">
+                                    <span>Today</span>
+                                    <span class="likes">
+                                        <img src="image/likes.png">
+                                    </span>
+                                    <span>128</span>
+                                    <span class="comment">
+                                        <img src="image/comment.png">
+                                    </span>
+                                    <span> 31</span>
+                                </div>
+                                <div>
+                                    <span>9-08-2016</span>
+                                    <span class="likes">
+                                        <img src="image/likes.png">
+                                    </span>
+                                    <span>67</span>
+                                    <span class="comment">
+                                        <img src="image/comment.png">
+                                    </span>
+                                    <span>22</span>
+                                </div>
+                                <div>
+                                    <span>Image upload: 11-04-2016</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block col-xs-12 col-sm-6 col-lg-4">
+                            <img src="image/block7.png" alt="picture">
+                            <div class="overlay">
+                                <div class="first">
+                                    <span>Today</span>
+                                    <span class="likes">
+                                        <img src="image/likes.png">
+                                    </span>
+                                    <span>128</span>
+                                    <span class="comment">
+                                        <img src="image/comment.png">
+                                    </span>
+                                    <span> 31</span>
+                                </div>
+                                <div>
+                                    <span>9-08-2016</span>
+                                    <span class="likes">
+                                        <img src="image/likes.png">
+                                    </span>
+                                    <span>67</span>
+                                    <span class="comment">
+                                        <img src="image/comment.png">
+                                    </span>
+                                    <span>22</span>
+                                </div>
+                                <div>
+                                    <span>Image upload: 11-04-2016</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block col-xs-12 col-sm-6 col-lg-4">
+                            <img src="image/block8.png" alt="picture">
+                            <div class="overlay">
+                                <div class="first">
+                                    <span>Today</span>
+                                    <span class="likes">
+                                        <img src="image/likes.png">
+                                    </span>
+                                    <span>128</span>
+                                    <span class="comment">
+                                        <img src="image/comment.png">
+                                    </span>
+                                    <span> 31</span>
+                                </div>
+                                <div>
+                                    <span>9-08-2016</span>
+                                    <span class="likes">
+                                        <img src="image/likes.png">
+                                    </span>
+                                    <span>67</span>
+                                    <span class="comment">
+                                        <img src="image/comment.png">
+                                    </span>
+                                    <span>22</span>
+                                </div>
+                                <div>
+                                    <span>Image upload: 11-04-2016</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block col-xs-12 col-sm-6 col-lg-4">
+                            <img src="image/block9.png" alt="picture">
+                            <div class="overlay">
+                                <div class="first">
+                                    <span>Today</span>
+                                    <span class="likes">
+                                        <img src="image/likes.png">
+                                    </span>
+                                    <span>128</span>
+                                    <span class="comment">
+                                        <img src="image/comment.png">
+                                    </span>
+                                    <span> 31</span>
+                                </div>
+                                <div>
+                                    <span>9-08-2016</span>
+                                    <span class="likes">
+                                        <img src="image/likes.png">
+                                    </span>
+                                    <span>67</span>
+                                    <span class="comment">
+                                        <img src="image/comment.png">
+                                    </span>
+                                    <span>22</span>
+                                </div>
+                                <div>
+                                    <span>Image upload: 11-04-2016</span>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="load">
+                    <a href="#" class="myButton">LOAD MODE</a>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
